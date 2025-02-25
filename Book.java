@@ -8,7 +8,7 @@ package com.mycompany.library;
  *
  * @author glaba
  */
-public class Book {
+public class Book implements BookInterface{
     String title;
     String author;
     boolean isBorrowed;
@@ -20,20 +20,27 @@ public class Book {
                 
     }
 
-    Book() {
+    public Book() {
 this.title="";
 this.author="";
 
     }
 
+    @Override
     public String getTitle() {
         return title;
     }
 
+    @Override
     public String getAuthor() {
         return author;
     }
     
+    /**
+     *
+     * @return
+     */
+    @Override
     public boolean borrowBook(){
         
     if(isBorrowed==false){
@@ -44,6 +51,11 @@ this.author="";
     return false ;
     }
     
+    /**
+     *
+     * @return
+     */
+    @Override
     public boolean returnBook(){
         
         if(isBorrowed==true){

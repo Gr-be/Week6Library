@@ -20,28 +20,23 @@ public class MainLibrary {
         library.addBooks(book2);
         library.addBooks(book1);
         
-        library.listBooks();
+        System.out.println(library.listBooks());
         System.out.println("");
         library.borrowBook("The Cat in the Hat");
         library.borrowBook("The Cat in the Hat");
-        library.listBooks();
+        System.out.println(library.listBooks());
         System.out.println("");
         library.returnBook("The Cat in the Hat");
         System.out.println("");
-        library.listBooks();
+        System.out.println(library.listBooks());
         System.out.println("");
         Book book4=new Book("Spider Man", "Stan-Lee");
         library.addBooks(book4);
         
-        library.listBooks();
-        
-        
-       for(int i=0; i<10; i++){
-           library.addBooks(book4);
-       }
-        System.out.println("");
         System.out.println(library.listBooks());
         
+        
+
         
         
         
